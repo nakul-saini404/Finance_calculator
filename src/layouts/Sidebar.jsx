@@ -1,9 +1,12 @@
 import { Box, Typography } from '@mui/material';
 import { NAV_ITEMS } from '../constants/constants';
+import { useNavigate } from "react-router-dom";
+
 
 const SIDEBAR_W = 240;
 
 export function Sidebar({ activePage, onNavigate }) {
+  const navigate = useNavigate();
   return (
     <Box sx={{
       width: SIDEBAR_W, minHeight: '100vh',
@@ -42,7 +45,8 @@ export function Sidebar({ activePage, onNavigate }) {
               return (
                 <Box
                   key={item.id}
-                  onClick={() => onNavigate(item.id)}
+                  onClick={() => navigate(`/${item.id}`)}
+                  
                   sx={{
                     display: 'flex', alignItems: 'center', gap: 1.25,
                     px: 1.5, py: 1.125, borderRadius: 2.25, cursor: 'pointer',
@@ -90,7 +94,8 @@ export function Sidebar({ activePage, onNavigate }) {
       {/* Footer */}
       <Box sx={{ px: 1.25, py: 1.5, borderTop: '1px solid rgba(255,255,255,0.06)', flexShrink: 0 }}>
         <Box
-          onClick={() => onNavigate('dashboard')}
+          // onClick={() => onNavigate('home')}
+          onClick={() => navigate('/')}
           sx={{
             display: 'flex', alignItems: 'center', gap: 1,
             px: 1.5, py: 1.125, borderRadius: 2.25, cursor: 'pointer',
