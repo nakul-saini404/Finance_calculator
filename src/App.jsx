@@ -43,8 +43,8 @@ export default function App() {
       <CssBaseline />
       <MainLayout activePage={activePage} onNavigate={setActivePage}>
         {/* {PageComponent } */}
+        <HubNavbar />
         <Routes>
-          <HubNavbar />
           <Route path="/" element={<HomePage />} />
           <Route path="/emi" element={<EmiPage />} />
           <Route path="/gst" element={<GstPage />} />
