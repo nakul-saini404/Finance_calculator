@@ -3,11 +3,9 @@ import { Sidebar } from "./Sidebar";
 import { Topbar } from "./Topbar";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
 
 export function MainLayout({ activePage, onNavigate, children }) {
   const SIDEBAR_W = 240;
-  const [open, setOpen] = useState(false);
 
   return (
     // <Box sx={{ display: 'flex', minHeight: '100vh', overflow: 'hidden' }}>
