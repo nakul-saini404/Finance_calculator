@@ -21,34 +21,34 @@ export function MainLayout({ activePage, onNavigate, children }) {
     // </Box>
 
     <Box sx={{ display: 'flex', minHeight: '100vh', overflow: 'hidden' }}>
-  
-  {/* Sidebar */}
-  <Box
-    sx={{
-      display: { xs: 'none', md: 'block' } // ❌ hide on mobile
-    }}
-  >
-    <Sidebar activePage={activePage} onNavigate={onNavigate} />
-  </Box>
 
-  {/* Main Content */}
-  <Box
-    sx={{
-      marginLeft: { xs: 0, md: `${SIDEBAR_W}px` }, // ✅ remove margin on mobile
-      flex: 1,
-      display: 'flex',
-      flexDirection: 'column',
-      minHeight: '100vh',
-    }}
-  >
-    <Topbar activePage={activePage} />
+      {/* Sidebar */}
+      <Box
+        sx={{
+          display: { xs: 'none', md: 'block' } // ❌ hide on mobile
+        }}
+      >
+        <Sidebar activePage={activePage} onNavigate={onNavigate} />
+      </Box>
 
-    <Box sx={{ flex: 1, overflow: 'auto' }}>
-      {children}
+      {/* Main Content */}
+      <Box
+        sx={{
+          marginLeft: { xs: 0, md: `${SIDEBAR_W}px` }, // ✅ remove margin on mobile
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+        }}
+      >
+        {/* <Topbar activePage={activePage} /> */}
+
+        <Box sx={{ flex: 1, overflow: 'auto' }}>
+          {children}
+        </Box>
+      </Box>
+
     </Box>
-  </Box>
-
-</Box>
 
   );
 }

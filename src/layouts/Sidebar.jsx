@@ -1,11 +1,12 @@
 import { Box, Typography } from '@mui/material';
 import { NAV_ITEMS } from '../constants/constants';
 import { useNavigate } from "react-router-dom";
+import ForgeCodeHubLogo from '../components/ForgeCodeHubLogo';
 
 
 const SIDEBAR_W = 240;
 
-export function Sidebar({ activePage, onNavigate }) {
+export function Sidebar({ activePage }) {
   const navigate = useNavigate();
   return (
     <Box sx={{
@@ -19,14 +20,15 @@ export function Sidebar({ activePage, onNavigate }) {
       {/* Logo */}
       <Box sx={{ px: 2.5, pt: 3, pb: 2.5, borderBottom: '1px solid rgba(255,255,255,0.06)', flexShrink: 0 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
-          <Box sx={{
+          {/* <Box sx={{
             width: 36, height: 36, borderRadius: 2.5, flexShrink: 0,
             background: 'linear-gradient(135deg, #34d399, #60a5fa)',
             display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
-          }}>💰</Box>
-          <Typography sx={{ fontFamily: "'Syne', sans-serif", fontSize: 20, fontWeight: 800, letterSpacing: '-0.5px' }}>
-            Fin<span style={{ color: '#34d399' }}>Vault</span>
-          </Typography>
+          }}>💰</Box> */}
+          {/* <Typography sx={{ fontFamily: "'Syne', sans-serif", fontSize: 20, fontWeight: 800, letterSpacing: '-0.5px' }}>
+            Financial <span style={{ color: '#34d399' }}>Calculators</span>
+          </Typography> */}
+          <ForgeCodeHubLogo />
         </Box>
         <Typography sx={{ fontSize: 10, color: 'text.disabled', textTransform: 'uppercase', letterSpacing: '1.5px', mt: 0.625 }}>
           Financial Calculators
@@ -46,7 +48,7 @@ export function Sidebar({ activePage, onNavigate }) {
                 <Box
                   key={item.id}
                   onClick={() => navigate(`/${item.id}`)}
-                  
+
                   sx={{
                     display: 'flex', alignItems: 'center', gap: 1.25,
                     px: 1.5, py: 1.125, borderRadius: 2.25, cursor: 'pointer',
