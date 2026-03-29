@@ -21,7 +21,7 @@ export function PageHeader({ icon, title, subtitle, iconBg, onNavigate }) {
     </Box>
       <Box
       onClick={() => navigate('/')}
-      sx={{
+      sx={{    display: { xs: 'block', md: 'none' }, // 👈 hide above 786px
         fontSize: 11, px: 1.5, py: 0.5, borderRadius: 5, fontWeight: 600,
         background: 'rgba(52,211,153,0.12)', color: '#34d399',
         border: '1px solid rgba(52,211,153,0.2)',
