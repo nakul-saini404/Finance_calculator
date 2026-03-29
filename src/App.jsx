@@ -9,18 +9,20 @@ import { TaxPage } from './pages/tax/TaxPage';
 import { SipPage } from './pages/sip/SipPage';
 import { LoanPage } from './pages/loan/LoanPage';
 import { Routes, Route } from "react-router-dom";
-import { FdPage} from './pages/fd/FdPage';
+import { FdPage } from './pages/fd/FdPage';
 import { GoalPage } from './pages/goal/GoalPage.jsx';
 import { NetWorthPage } from './pages/netWorth/NetWorthPage.jsx';
 import { RetirementPage } from './pages/retirement/RetirementPage.jsx';
+import HubNavbar from './components/HubNavbar';
+
 
 
 const PAGES = {
   home: <HomePage />,
-  emi:  <EmiPage />,
-  gst:  <GstPage />,
-  tax:  <TaxPage />,
-  sip:  <SipPage />,
+  emi: <EmiPage />,
+  gst: <GstPage />,
+  tax: <TaxPage />,
+  sip: <SipPage />,
   loan: <LoanPage />,
   fd: <FdPage />,
   retirement: <RetirementPage />,
@@ -41,6 +43,7 @@ export default function App() {
       <CssBaseline />
       <MainLayout activePage={activePage} onNavigate={setActivePage}>
         {/* {PageComponent } */}
+        <HubNavbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/emi" element={<EmiPage />} />

@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "source": "/calculators/assets/(.*)",
+            "destination": "/calculators/assets/$1"
+        },
+        {
+            "source": "/calculators/(.*)",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
