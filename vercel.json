@@ -1,11 +1,11 @@
 {
     "rewrites": [
         {
-            "source": "/calculators/assets/(.*)",
-            "destination": "/calculators/assets/$1"
+            "source": "/finance-calculators/assets/(.*)",
+            "destination": "/finance-calculators/assets/$1"
         },
         {
-            "source": "/calculators/(.*)",
+            "source": "/finance-calculators/(.*)",
             "destination": "/index.html"
         },
         {
